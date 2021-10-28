@@ -1,31 +1,63 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
 import './NavBar.css'
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-			<>
-				<Nav
-					className='col-md-12 d-none d-md-block bg-light sidebar'
-					activeKey='/home'
-					onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
-					<div className='sidebar-sticky'></div>
-					
-						<Nav.Link href='/home'>Active</Nav.Link>
-				
-					
-						<Nav.Link eventKey='link-1'>Link</Nav.Link>
-				
-					
-						<Nav.Link eventKey='link-2'>Link</Nav.Link>
-				
-					
-						<Nav.Link eventKey='' >
-					
-						</Nav.Link>
-				
-				</Nav>
-			</>
+			<div className='side-nav'>
+				<nav className='navigation'>
+					<ul className='links'>
+						<li>
+							<Link
+								to='/Home'
+								className='navlink'
+								style={{ textDecoration: 'none' }}>
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/Profile'
+								className='navlink'
+								style={{ textDecoration: 'none' }}>
+								Profile
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/Settings'
+								className='navlink'
+								style={{ textDecoration: 'none' }}>
+								Settings
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/Favorites'
+								className='navlink'
+								style={{ textDecoration: 'none' }}>
+								Favorites
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/Rules'
+								className='navlink'
+								style={{ textDecoration: 'none' }}>
+								Rules
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/Messages'
+								className='navlink'
+								style={{ textDecoration: 'none' }}>
+								Messages
+							</Link>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		);
 };
 
