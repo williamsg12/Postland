@@ -1,64 +1,39 @@
 import React from 'react';
-import './NavBar.css'
+import './NavBar.css';
 import { Link } from 'react-router-dom';
+import { Container,Navbar,Nav } from 'react-bootstrap';
 
 const NavBar = () => {
-    return (
-			<div className='side-nav'>
-				<nav className='navigation'>
-					<ul className='links'>
-						<li>
-							<Link
-								to='/Home'
-								className='navlink'
-								style={{ textDecoration: 'none' }}>
-								Home
+	return (
+		<div className='side-nav'>
+			<Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
+				<Container>
+					<Link to='/' className='nav'>
+						<h4 className='nav'>PostLand</h4>
+					</Link>
+					<Navbar.Toggle aria-controls='responsive-navbar-nav' />
+					<Navbar.Collapse id='responsive-navbar-nav'>
+						<Nav className='me-auto'>
+							<Link to='/' className='nav'>
+								<h4 className='nav'>Home</h4>
 							</Link>
-						</li>
-						<li>
-							<Link
-								to='/Profile'
-								className='navlink'
-								style={{ textDecoration: 'none' }}>
-								Profile
+							<Link to='/posts' className='nav'>
+								<h4 className='nav'>Post</h4>
 							</Link>
-						</li>
-						<li>
-							<Link
-								to='/Settings'
-								className='navlink'
-								style={{ textDecoration: 'none' }}>
-								Settings
+						</Nav>
+						<Nav>
+							<Link to='profile' className='nav'>
+								<h4 className='nav'>Profile</h4>
 							</Link>
-						</li>
-						<li>
-							<Link
-								to='/Favorites'
-								className='navlink'
-								style={{ textDecoration: 'none' }}>
-								Favorites
+							<Link to='setting' className='nav'>
+								<h4 className='nav'>Settings</h4>
 							</Link>
-						</li>
-						<li>
-							<Link
-								to='/Rules'
-								className='navlink'
-								style={{ textDecoration: 'none' }}>
-								Rules
-							</Link>
-						</li>
-						<li>
-							<Link
-								to='/Messages'
-								className='navlink'
-								style={{ textDecoration: 'none' }}>
-								Messages
-							</Link>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		);
+						</Nav>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
+		</div>
+	);
 };
 
 export default NavBar;

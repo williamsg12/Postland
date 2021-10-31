@@ -1,18 +1,9 @@
-.links {
-
-	list-style: none;
+.nav{
 	text-decoration: none;
-	background: darkmagenta;
-	font-size: 20px;
-    
+	transition: .4s;
+	padding-left: 10px;
 }
-
-.navlink {
-	color: white;
-    border-top: 2px solid black ;
-    /* border-bottom: 2px solid black; */
-}
-
-.navlink :hover{
-	color: red;
+.nav :hover{
+	color: aliceblue;
+	padding-left: 20px;
 }

@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './Component/NavBar/NavBar';
 import Home from './Component/Home/Home'
 import Profile from './Component/Profile/Profile'
-import Friend from './Component/Friends/Friend'
+import Post from './Component/Posts/Post'
 import Settings from './Component/Settings/Settings';
 
 function App() {
@@ -11,10 +11,10 @@ function App() {
     <div>
      <NavBar />
 
-     <Route component={Home} />
-     <Route component={Profile}/>
-     <Route component={Friend} />
-     <Route component={Settings} />
+     <Route path='/' component={Home} />
+     <Route path='/profile'component={Profile}/>
+     <Route path='/post' component={Post} />
+     <Route path='/setting' component={Settings} />
     </div>
   );
 }

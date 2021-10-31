@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Friend = () => {
+const Post = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Friend = () => {
     );
 };
 
-export default Friend;
+export default Post;
